@@ -1,0 +1,52 @@
+<div class="form-container">
+  <form (ngSubmit)="submit()" class="form">
+    <label for="">Name</label>
+    <input
+      type="text"
+      class="input-fields"
+      placeholder="Enter Username"
+      [(ngModel)]="username"
+      name="username"
+      required
+      minlength="2"
+      #username ="ngModel"
+    />
+    <div *ngIf="!username.valid && (username.dirty || username.touched)">
+      Invalid first name
+      <div *ngIf="username.errors?.['required']">
+        Username is required
+      </div>
+      <div *ngIf="username.errors?.['minlength']">
+        Minimum required length is {{username.errors?.['minlength']?.requiredLength}}
+      </div>
+    </div>
+    <label for="">Email</label>
+    <input
+      type="email"
+      class="input-fields"
+      placeholder="Enter Username"
+      [(ngModel)]="email"
+      name="email"
+      #email="ngModel"
+      required
+    />
+    <div *ngIf="!email.valid && (email.dirty || email.touched)">
+      Invalid email
+      <div *ngIf="email.errors?.['required']">
+        Email is required
+      </div>
+      
+    </div>
+    <label for="">Password</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      class="input-fields"
+      placeholder="Enter Password"
+      [(ngModel)]="password"
+      name="password"
+    />
+    <button type="submit" class="submit-btn">Sign Up</button>
+  </form>
+</div>

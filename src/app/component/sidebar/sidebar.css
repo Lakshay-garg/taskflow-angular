@@ -1,0 +1,16 @@
+.links {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.heading{
+    margin-left: 30px;
+}
+.nav-links {
+  list-style-type: none;
+  margin-top: 6%;
+}
+
+.nav-links > a {
+  text-decoration: none;
+}

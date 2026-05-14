@@ -1,0 +1,20 @@
+<div class="task-cards">
+  <div class="card">
+    <div class="card-heading"><span>Total</span></div>
+    <div class="card-count"><span>{{totalTodos$ | async}}</span></div>
+  </div>
+  <div class="card">
+    <div class="card-heading"><span>Completed</span></div>
+    <div class="card-count"><span>{{completedTodos$ | async}}</span></div>
+  </div>
+  <div class="card">
+    <div class="card-heading"><span>Pending</span></div>
+    <div class="card-count"><span>{{pendingTodos$ | async}}</span></div>
+  </div>
+  <div class="card">
+    <div class="card-heading"><span>Overdue</span></div>
+    <div class="card-count">
+      <span>{{overdueTodos$ | async}}</span>
+    </div>
+  </div>
+</div>
