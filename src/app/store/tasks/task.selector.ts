@@ -21,17 +21,22 @@ export const selectTotalTasks = createSelector(
 // Completed Tasks
 export const selectCompletedTasks = createSelector(
     selectTasks,
-    (todos) => todos.filter(todo => todo.completed).length
+    (todos) => todos.filter(todo => todo.completed === "completed").length
 )
 
 // Pending Tasks
 export const selectPendingTasks = createSelector(
     selectTasks,
-    (todos) => todos.filter(todo => !todo.completed).length
+    (todos) => todos.filter(todo => todo.completed === "pending").length
+)
+
+export const selectInProgressTasks = createSelector(
+    selectTasks,
+    (todos) => todos.filter(todo => todo.completed === "inprogress").length
 )
 
 //Overdue Tasks
 export const selectOverdueTasks = createSelector(
     selectTasks,
-    (todos)=> todos.filter(todo => !todo.completed && new Date(todo.dueDate) < new Date()).length
+    (todos)=> todos.filter(todo => todo.completed !== "completed" && new Date(todo.dueDate) < new Date()).length
 )

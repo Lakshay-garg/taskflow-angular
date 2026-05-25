@@ -22,8 +22,8 @@ export const taskReducer = createReducer(
     )
   })),
 
-  on(toggleComplete,(state,{id})=>({
+  on(toggleComplete,(state,{id,status})=>({
     ...state,
-    taskList: state.taskList.map(task => task.id === id ? {...task,completed:!task.completed} : task)
+    taskList: state.taskList.map(task => task.id === id ? {...task,completed:status} : task)
   }))
 );

@@ -1,97 +1,31 @@
 <div>
   <div class="input-container">
-    <input type="text" class="search-box" />
-    <select name="" id="">
-      <option value="">Completed</option>
+    <input type="text" class="search-box" placeholder="Enter text to search todo list" (input)="searchText.set($any($event.target).value)"/>
+    <select class="select-input" name="" id="" (change)="selectedStatus.set($any($event.target).value)">
+      <option value="">All</option>
+      <option value="completed">Completed</option>
+      <option value="pending">Pending</option>
+      <option value="inprogress">In Progress</option>
     </select>
-    <select name="" id="">
-      <option value="">Low</option>
+    <select class="select-input" name="" id="" (change)="selectedPriority.set($any($event.target).value)">
+      <option value="">All</option>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
     </select>
   </div>
   <div class="task-container">
-    <div class="task-card">
+    <div class="task-card" *ngFor="let task of filteredTasks()">
       <div class="task-header">
-        <h3>Complete Project</h3>
-        <span class="status completed">Completed</span>
+        <h3>{{ task.title }}</h3>
+        <span class="status completed">{{ task.completed | titlecase }}</span>
       </div>
 
-      <div class="description">Finish the frontend dashboard and integrate API.</div>
+      <div class="description">{{ task.description }}</div>
 
       <div class="task-footer">
-        <span class="priority high">High</span>
-        <span class="due-date">Due: 10 Apr</span>
-      </div>
-
-      <div class="actions">
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
-      </div>
-    </div>
-     <div class="task-card">
-      <div class="task-header">
-        <h3>Complete Project</h3>
-        <span class="status completed">Completed</span>
-      </div>
-
-      <div class="description">Finish the frontend dashboard and integrate API.</div>
-
-      <div class="task-footer">
-        <span class="priority high">High</span>
-        <span class="due-date">Due: 10 Apr</span>
-      </div>
-
-      <div class="actions">
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
-      </div>
-    </div>
-     <div class="task-card">
-      <div class="task-header">
-        <h3>Complete Project</h3>
-        <span class="status completed">Completed</span>
-      </div>
-
-      <div class="description">Finish the frontend dashboard and integrate API.</div>
-
-      <div class="task-footer">
-        <span class="priority high">High</span>
-        <span class="due-date">Due: 10 Apr</span>
-      </div>
-
-      <div class="actions">
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
-      </div>
-    </div>
-     <div class="task-card">
-      <div class="task-header">
-        <h3>Complete Project</h3>
-        <span class="status completed">Completed</span>
-      </div>
-
-      <div class="description">Finish the frontend dashboard and integrate API.</div>
-
-      <div class="task-footer">
-        <span class="priority high">High</span>
-        <span class="due-date">Due: 10 Apr</span>
-      </div>
-
-      <div class="actions">
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
-      </div>
-    </div>
-     <div class="task-card">
-      <div class="task-header">
-        <h3>Complete Project</h3>
-        <span class="status completed">Completed</span>
-      </div>
-
-      <div class="description">Finish the frontend dashboard and integrate API.</div>
-
-      <div class="task-footer">
-        <span class="priority high">High</span>
-        <span class="due-date">Due: 10 Apr</span>
+        <span class="priority high">{{ task.priority }}</span>
+        <span class="due-date">{{ task.dueDate | date }}</span>
       </div>
 
       <div class="actions">

@@ -8,11 +8,11 @@
   flex: 1;
 }
 
-.task-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 20px;
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
 }
 
 .task-card {
@@ -47,8 +47,8 @@
   margin: 10px 0;
 }
 
-.due-date{
-    margin-left: 10px;
+.due-date {
+  margin-left: 10px;
 }
 .priority {
   padding: 4px 10px;
@@ -119,4 +119,18 @@ button {
 
 .delete-btn:hover {
   background: #d32f2f;
+}
+
+.search-box {
+  padding: 0.8rem 0.5rem;
+  background-color: #f3f0f0;
+  color: black;
+  border-radius: 1rem;
+}
+
+.select-input {
+  padding: 0.8rem 0.5rem;
+  background-color: #f3f0f0;
+  color: black;
+  border-radius: 1rem;
 }

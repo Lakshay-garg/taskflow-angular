@@ -4,7 +4,7 @@ export const dummyTasks: Task[] = [
   {
     id: 1,
     title: 'Learn Angular Signals',
-    completed: true,
+    completed: 'completed',
     description: 'Understand signals, computed and effects',
     priority: 'High',
     dueDate: new Date('2026-05-10'),
@@ -12,7 +12,7 @@ export const dummyTasks: Task[] = [
   {
     id: 2,
     title: 'Build Todo App with NgRx',
-    completed: false,
+    completed: 'inprogress',
     description: 'Implement store, actions, reducers and selectors',
     priority: 'High',
     dueDate: new Date('2026-05-20'),
@@ -20,7 +20,7 @@ export const dummyTasks: Task[] = [
   {
     id: 3,
     title: 'Practice JavaScript Array Methods',
-    completed: true,
+    completed: 'completed',
     description: 'Focus on map, filter, reduce and find',
     priority: 'Medium',
     dueDate: new Date('2026-05-08'),
@@ -28,7 +28,7 @@ export const dummyTasks: Task[] = [
   {
     id: 4,
     title: 'Complete React Project',
-    completed: false,
+    completed: 'pending',
     description: 'Finish authentication and dashboard module',
     priority: 'High',
     dueDate: new Date('2026-05-15'),
@@ -36,7 +36,7 @@ export const dummyTasks: Task[] = [
   {
     id: 5,
     title: 'Read about RxJS',
-    completed: false,
+    completed: 'inprogress',
     description: 'Learn observables and operators',
     priority: 'Low',
     dueDate: new Date('2026-05-25'),
@@ -44,7 +44,7 @@ export const dummyTasks: Task[] = [
   {
     id: 6,
     title: 'Prepare for Frontend Interview',
-    completed: true,
+    completed: 'completed',
     description: 'Revise HTML, CSS, JavaScript and Angular',
     priority: 'Medium',
     dueDate: new Date('2026-05-05'),
@@ -52,7 +52,7 @@ export const dummyTasks: Task[] = [
   {
     id: 7,
     title: 'Design Responsive Navbar',
-    completed: false,
+    completed: 'pending',
     description: 'Create mobile responsive navigation UI',
     priority: 'Medium',
     dueDate: new Date('2026-05-12'),
@@ -60,7 +60,7 @@ export const dummyTasks: Task[] = [
   {
     id: 8,
     title: 'Fix Authentication Bug',
-    completed: false,
+    completed: 'pending',
     description: 'Resolve page reload redirect issue',
     priority: 'High',
     dueDate: new Date('2026-05-01'),

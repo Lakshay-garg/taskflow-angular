@@ -3,7 +3,7 @@ import { dummyTasks } from "../../data/dummyData";
 export interface Task {
   id: number;
   title: string;
-  completed: boolean;
+  completed: 'completed' | 'inprogress' | 'pending';
   description: string;
   priority: string;
   dueDate: Date;
