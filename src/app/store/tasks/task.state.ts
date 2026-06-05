@@ -1,7 +1,7 @@
 import { dummyTasks } from "../../data/dummyData";
 
 export interface Task {
-  id: number;
+  id: any;
   title: string;
   completed: 'completed' | 'inprogress' | 'pending';
   description: string;

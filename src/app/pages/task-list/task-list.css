@@ -134,3 +134,18 @@ button {
   color: black;
   border-radius: 1rem;
 }
+
+.button-container{
+  margin-top: 1rem;
+  margin-right: 4.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+.task-button{
+  padding: 0.8rem;
+  border-radius: 10px;
+  background-color: #13b88f;
+  color: white;
+  font-size: 0.9rem;
+}

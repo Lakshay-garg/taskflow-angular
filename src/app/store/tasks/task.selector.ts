@@ -40,3 +40,8 @@ export const selectOverdueTasks = createSelector(
     selectTasks,
     (todos)=> todos.filter(todo => todo.completed !== "completed" && new Date(todo.dueDate) < new Date()).length
 )
+
+export const selectTaskById = (id:number) => createSelector(
+    selectTasks,
+    (todos) => todos.find(todo => todo.id == id)
+)

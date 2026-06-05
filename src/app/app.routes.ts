@@ -6,6 +6,7 @@ import { LoginLayout } from './layout/login-layout/login-layout';
 import { Layout } from './layout/layout/layout';
 import { SignUp } from './pages/sign-up/sign-up';
 import { authGuard } from './guards/auth-guard-guard';
+import { TaskDetailPage } from './pages/task-detail-page/task-detail-page';
 
 export const routes: Routes = [
   {
@@ -28,6 +29,7 @@ export const routes: Routes = [
     children: [
       { path: 'dashboard', component: Dashboard },
       { path: 'task-list', component: TaskList },
+      { path: 'task-detail/:id', component: TaskDetailPage },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     ],
   },

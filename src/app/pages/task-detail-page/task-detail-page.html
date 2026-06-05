@@ -1,0 +1,32 @@
+<div class="task-detail-page" *ngIf="task$ | async as task">
+  
+  <h2>Task Details</h2>
+
+  <div class="detail-item">
+    <span class="label">Title:</span>
+    <span>{{ task.title }}</span>
+  </div>
+
+  <div class="detail-item">
+    <span class="label">Description:</span>
+    <span>{{ task.description }}</span>
+  </div>
+
+  <div class="detail-item">
+    <span class="label">Priority:</span>
+    <span>{{ task.priority }}</span>
+  </div>
+
+  <div class="detail-item">
+    <span class="label">Status:</span>
+    <span>
+      {{ task.completed ? 'Completed' : 'Pending' }}
+    </span>
+  </div>
+
+  <div class="detail-item">
+    <span class="label">Due Date:</span>
+    <span>{{ task.dueDate | date:'mediumDate' }}</span>
+  </div>
+
+</div>

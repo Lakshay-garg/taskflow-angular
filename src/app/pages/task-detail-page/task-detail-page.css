@@ -1,0 +1,27 @@
+.task-detail-page {
+  width: 60%;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-detail-page h2 {
+  margin-bottom: 25px;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.label {
+  width: 140px;
+  font-weight: 600;
+  color: #444;
+}
